@@ -1,3 +1,132 @@
+ninja:
+import 'package:flutter/material.dart';
+// import 'package:flutter/rendering.dart';
+// // import 'package:http/http.dart';
+// import 'package:dio/dio.dart';
+// import 'dart:convert';
+
+// void main() {
+//   runApp(MyApp());
+// }
+void main() => runApp(MaterialApp(
+      home: Cbv(), //home: Cbv runs app in homescreen
+    ));
+
+class Cbv extends StatelessWidget {
+  @override //@override is used to override default properties and methods and widgets of StatelessWidget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Scaffold"),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Padding(padding: EdgeInsets.all(100.0), child: Text("data")),
+      // body: Container(
+      //     margin: EdgeInsets.all(17.0),
+      // padding: EdgeInsets.fromLTRB(10.0, 7.0, 17.0, 70.0),
+      //     // padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 17.0),
+      // padding: EdgeInsets.all(10), //increases 17 pixels from all sides
+      // color: Colors.lightBlue[700],
+      // child: Text(
+      //   "Container",
+      //   style: TextStyle(fontSize: 70),
+      // )),
+      // child: IconButton(
+      //   onPressed: () {
+      //     print("Icon button clicked");
+      //   },
+      //   icon: Icon(
+      //     Icons.verified_sharp,
+      //     color: Colors.blue,
+      //     size: 50,
+      //   ),
+      //   splashRadius: 10,
+      //   color: Colors.yellow,
+      // ),
+      // child: FlatButton(
+      //   onPressed: () {
+      //     print("Flatbutton clicked");
+      //   },
+      //   color: Colors.amberAccent,
+      //   child: Text(
+      //     "click me",
+      //     style: TextStyle(
+      //         color: Colors.blueAccent,
+      //         backgroundColor: Colors.deepOrangeAccent,
+      //         fontWeight: FontWeight.bold,
+      //         fontFamily: "Pacifico",
+      //         fontSize: 50),
+      //   ),
+      // ),
+      // child: RaisedButton.icon(
+      //     onPressed: () {},
+      //     color: Colors.yellowAccent,
+      //     icon: Icon(Icons.animation),
+      //     label: Text("animation") //label property sits next to the icon
+
+      // child: Text(
+      // "click me",
+      // style: TextStyle(
+      //     color: Colors.blueAccent,
+      //     backgroundColor: Colors.deepOrangeAccent,
+      //     fontWeight: FontWeight.bold,
+      //     fontFamily: "Pacifico",
+      //     fontSize: 50),
+      // ),
+      // ),
+      //   child: Icon(
+      // Icons.verified_user_outlined,
+      // color: Colors.orangeAccent,
+      // size: 70,)
+      // ),
+      //   child: Image.asset("images/cv.jpg"),
+      // ),
+      // child: Image.network(
+      //     "https://tech.pelmorex.com/wp-content/uploads/2020/10/flutter.png"), //both network and asset image can be accessed in such a way
+      // ),
+
+      // child: Image(
+      //   image: AssetImage("images/cv.jpg"),
+      // image: NetworkImage(
+      //     "https://tech.pelmorex.com/wp-content/uploads/2020/10/flutter.png"),
+      // ),
+
+      // child: Text(
+      //   "ninja",
+      //   style: TextStyle(
+      //       fontSize: 70.0,
+      //       fontWeight: FontWeight.bold,
+      //       letterSpacing: 2.0,
+      //       color: Colors.grey[600],
+      //       fontFamily: "Pacifico"),
+      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("click"),
+        backgroundColor: Colors.amber,
+      ),
+    );
+  }
+}
+ninja/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import 'package:flutter/material.dart';
 // import 'package:flutter/rendering.dart';
 // // import 'package:http/http.dart';
