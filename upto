@@ -1,5 +1,359 @@
 ninja:
 import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+      home: Ninjacardian(),
+    ));
+
+class Ninjacardian extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueGrey[900],
+      appBar: AppBar(
+        title: Text("ninja card"),
+        centerTitle: true,
+        backgroundColor: Colors.black54,
+        elevation: 0.0,
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(10, 20, 1, 5),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("NAME",
+                style: TextStyle(
+                    color: Colors.tealAccent,
+                    letterSpacing: 2.0,
+                    fontFamily: "Pacifico")),
+            SizedBox(
+              height: 10,
+            ),
+            Text("Ninja",
+                style: TextStyle(
+                  color: Colors.orangeAccent[100],
+                  letterSpacing: 2.0,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                )),
+            SizedBox(
+              height: 10,
+            ),
+            Text("Current Ninja Level",
+                style: TextStyle(
+                    color: Colors.tealAccent,
+                    letterSpacing: 10.0,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Pacifico")),
+            SizedBox(
+              height: 10,
+            ),
+            Text("22",
+                style: TextStyle(
+                  color: Colors.orangeAccent[100],
+                  letterSpacing: 2.0,
+                  fontSize: 30.0,
+                  fontWeight: FontWeight.bold,
+                )),
+          ],
+        ),
+      ),
+    );
+  }
+}
+// import 'package:flutter/material.dart';
+// // import 'package:flutter/rendering.dart';
+// // // import 'package:http/http.dart';
+// // import 'package:dio/dio.dart';
+// // import 'dart:convert';
+
+// // void main() {
+// //   runApp(MyApp());
+// // }
+// void main() => runApp(MaterialApp(
+//       home: Cbv(), //home: Cbv runs app in homescreen
+//     ));
+
+// class Cbv extends StatelessWidget {
+//   @override //@override is used to override default properties and methods and widgets of StatelessWidget
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Scaffold"),
+//         centerTitle: true,
+//         backgroundColor: Colors.red[600],
+//       ),
+//       body: Row(
+//         mainAxisAlignment: MainAxisAlignment.start, //end, //center,
+//         crossAxisAlignment: CrossAxisAlignment.start, //center, //stretch,
+//         children: [
+//           Expanded(child: Image.asset("images/cv.jpg"), flex: 10),
+//           // Row(
+//           //   children: [Text("row in "), Text("column")],
+//           // ),
+//           Expanded(
+//             flex: 1,
+//             child: Container(
+//               padding: EdgeInsets.all(30.0),
+//               color: Colors.blueAccent,
+//               child: Text("1st"),
+//             ),
+//           ),
+//           Expanded(
+//             flex: 1,
+//             child: Container(
+//                 padding: EdgeInsets.all(30.0),
+//                 color: Colors.redAccent,
+//                 child: Text("2nd")),
+//           ),
+//           Expanded(
+//             flex: 1,
+//             child: Container(
+//                 padding: EdgeInsets.all(30.0),
+//                 color: Colors.amberAccent,
+//                 child: Text("3rd")),
+//           ),
+//         ],
+//       ),
+//       // body: Row(
+//       //   // mainAxisAlignment: MainAxisAlignment.start,//aligns all widgets at start
+//       //   mainAxisAlignment:
+//       //       MainAxisAlignment.spaceEvenly, //gives space evenly around widgets
+//       //   crossAxisAlignment: CrossAxisAlignment.start, //end, //start, //stretch,
+//       //   // mainAxisAlignment: MainAxisAlignment.spaceBetween,//gives space between widgets
+//       //   // mainAxisAlignment: MainAxisAlignment.spaceAround, spaces around
+//       //   // mainAxisAlignment: MainAxisAlignment.end,//brings widget to end
+//       //   // mainAxisAlignment: MainAxisAlignment.center,//brings widget to center
+//       //   children: [
+//       //     Text(
+//       //       "row data",
+//       //       style: TextStyle(
+//       //           color: Colors.orangeAccent, backgroundColor: Colors.redAccent),
+//       //     ),
+//       //     FlatButton(
+//       //       onPressed: () {},
+//       //       color: Colors.amber,
+//       //       child: Text("flatbutton"),
+//       //     ),
+//       //     Container(
+//       //       child: Text("container"),
+//       //       padding: EdgeInsets.all(7),
+//       //       color: Colors.lightBlueAccent[200],
+//       //     )
+//       //   ],
+//       // ),
+//       // body: Padding(padding: EdgeInsets.all(100.0), child: Text("data")),
+//       // body: Container(
+//       // margin: EdgeInsets.all(17.0),
+//       // padding: EdgeInsets.fromLTRB(10.0, 7.0, 17.0, 70.0),
+//       //     // padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 17.0),
+//       // padding: EdgeInsets.all(100), //increases 17 pixels from all sides
+//       // color: Colors.lightBlue[700],
+//       // child: Text(
+//       // "70 z", //   "Container",
+//       // style: TextStyle(fontSize: 70),
+//       // )),
+//       // child: IconButton(
+//       //   onPressed: () {
+//       //     print("Icon button clicked");
+//       //   },
+//       //   icon: Icon(
+//       //     Icons.verified_sharp,
+//       //     color: Colors.blue,
+//       //     size: 50,
+//       //   ),
+//       //   splashRadius: 10,
+//       //   color: Colors.yellow,
+//       // ),
+//       // child: FlatButton(
+//       //   onPressed: () {
+//       //     print("Flatbutton clicked");
+//       //   },
+//       //   color: Colors.amberAccent,
+//       //   child: Text(
+//       //     "click me",
+//       //     style: TextStyle(
+//       //         color: Colors.blueAccent,
+//       //         backgroundColor: Colors.deepOrangeAccent,
+//       //         fontWeight: FontWeight.bold,
+//       //         fontFamily: "Pacifico",
+//       //         fontSize: 50),
+//       //   ),
+//       // ),
+//       // child: RaisedButton.icon(
+//       //     onPressed: () {},
+//       //     color: Colors.yellowAccent,
+//       //     icon: Icon(Icons.animation),
+//       //     label: Text("animation") //label property sits next to the icon
+
+//       // child: Text(
+//       // "click me",
+//       // style: TextStyle(
+//       //     color: Colors.blueAccent,
+//       //     backgroundColor: Colors.deepOrangeAccent,
+//       //     fontWeight: FontWeight.bold,
+//       //     fontFamily: "Pacifico",
+//       //     fontSize: 50),
+//       // ),
+//       // ),
+//       //   child: Icon(
+//       // Icons.verified_user_outlined,
+//       // color: Colors.orangeAccent,
+//       // size: 70,)
+//       // ),
+//       //   child: Image.asset("images/cv.jpg"),
+//       // ),
+//       // child: Image.network(
+//       //     "https://tech.pelmorex.com/wp-content/uploads/2020/10/flutter.png"), //both network and asset image can be accessed in such a way
+//       // ),
+
+//       // child: Image(
+//       //   image: AssetImage("images/cv.jpg"),
+//       // image: NetworkImage(
+//       //     "https://tech.pelmorex.com/wp-content/uploads/2020/10/flutter.png"),
+//       // ),
+
+//       // child: Text(
+//       //   "ninja",
+//       //   style: TextStyle(
+//       //       fontSize: 70.0,
+//       //       fontWeight: FontWeight.bold,
+//       //       letterSpacing: 2.0,
+//       //       color: Colors.grey[600],
+//       //       fontFamily: "Pacifico"),
+//       // ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {},
+//         child: Text("click"),
+//         backgroundColor: Colors.amber,
+//       ),
+//     );
+//   }
+// }
+
+// // class MyApp extends StatelessWidget {
+// //   getDioData() async {
+// //     var dio = Dio();
+// //     Response response =
+// //         await dio.get("https://jsonplaceholder.typicode.com/photos");
+// //     print(response.data);
+// //   }
+
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return MaterialApp(
+// //       home: Scaffold(
+// //         backgroundColor: Colors.blueAccent,
+// //         body: Container(
+// //           child: Column(
+// //             mainAxisAlignment: MainAxisAlignment.center,
+// //             children: <Widget>[
+// //               CircleAvatar(
+// //                 radius: 77.0,
+// //                 backgroundImage: AssetImage(
+// //                   "images/cv.jpg",
+// //                 ),
+// //               ),
+// //               Text(
+// //                 "vola",
+// //                 style: TextStyle(
+// //                   fontFamily: "Pacifico",
+// //                   fontSize: 17.7,
+// //                   fontWeight: FontWeight.bold,
+// //                   letterSpacing: 20.0,
+// //                   color: Colors.white,
+// //                 ),
+// //               ),
+// //               Text(
+// //                 "big",
+// //                 style: TextStyle(
+// //                     fontSize: 77.0,
+// //                     fontWeight: FontWeight.bold,
+// //                     letterSpacing: .0,
+// //                     color: Colors.orangeAccent),
+// //               ),
+// //               Card(
+// //                 color: Colors.amberAccent,
+// //                 margin: EdgeInsets.symmetric(
+// //                   vertical: 1.0,
+// //                   horizontal: 7.7,
+// //                 ),
+// //                 child: ListTile(
+// //                   leading: Icon(
+// //                     Icons.phone_in_talk,
+// //                     color: Colors.deepOrangeAccent,
+// //                   ),
+// //                   title: Text(
+// //                     "77",
+// //                     style: TextStyle(
+// //                         color: Colors.orangeAccent,
+// //                         letterSpacing: 77.0,
+// //                         fontWeight: FontWeight.bold,
+// //                         fontSize: 77),
+// //                   ),
+// //                 ),
+// //               ),
+// //               Card(
+// //                 color: Colors.black54,
+// //                 shadowColor: Colors.greenAccent[300],
+// //                 elevation: 5.5,
+// //                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 66),
+// //                 child: ListTile(
+// //                   focusColor: Colors.lime,
+// //                   leading: Icon(
+// //                     Icons.emoji_events_outlined,
+// //                     size: 50,
+// //                   ),
+// //                   title: Text("cvcv",
+// //                       style: TextStyle(
+// //                           fontSize: 50.5,
+// //                           fontWeight: FontWeight.bold,
+// //                           backgroundColor: Colors.black45,
+// //                           color: Colors.orangeAccent,
+// //                           letterSpacing: 5.5)),
+// //                 ),
+// //               ),
+// //               Card(
+// //                 color: Colors.deepOrangeAccent,
+// //                 shadowColor: Colors.blueAccent,
+// //                 elevation: 10.0,
+// //                 margin: EdgeInsets.symmetric(vertical: 0, horizontal: 40),
+// //                 child: ListTile(
+// //                88   leading: Icon(
+// //                     Icons.email_rounded,
+// //                     color: Colors.deepPurpleAccent,
+// //                   ),
+// //                   title: Text(
+// //                     "email-identification",
+// //                     style: TextStyle(
+// //                         backgroundColor: Colors.amber,
+// //                         color: Colors.blueAccent,
+// //                         letterSpacing: 2.0,
+// //                         fontSize: 17.0,
+// //                         fontWeight: FontWeight.bold),
+// //                   ),
+// //                 ),
+// //               ),
+// //             ],
+// //           ),
+// //         ),
+// //       ),
+// //     );
+// //   }
+// // }
+
+ninja/
+
+
+
+
+
+
+
+ninja:
+import 'package:flutter/material.dart';
 // import 'package:flutter/rendering.dart';
 // // import 'package:http/http.dart';
 // import 'package:dio/dio.dart';
